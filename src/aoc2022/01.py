@@ -15,4 +15,4 @@ def calories(path):
 
 
 if __name__ == "__main__":
-    calories(Path("data/calories.txt"))
+    calories(Path("data/01.txt"))
