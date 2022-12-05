@@ -25,8 +25,6 @@ def second(Path):
 
     print(sum)
 
-    pass
-
 
 if __name__ == "__main__":
     first(Path("data/04.txt"))
