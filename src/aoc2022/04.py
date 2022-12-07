@@ -3,9 +3,9 @@
 from pathlib import Path
 
 
-def first(Path):
+def first(path):
     sum = 0
-    for line in Path.open().read().splitlines():
+    for line in path.open().read().splitlines():
         pair = map(lambda s: list(map(int, s.split("-"))), line.split(","))
         sets = list(map(lambda p: set(range(p[0], p[1] + 1)), pair))
         sets = sorted(sets, key=lambda s: len(s))
@@ -15,9 +15,9 @@ def first(Path):
     print(sum)
 
 
-def second(Path):
+def second(path):
     sum = 0
-    for line in Path.open().read().splitlines():
+    for line in path.open().read().splitlines():
         pair = map(lambda s: list(map(int, s.split("-"))), line.split(","))
         sets = list(map(lambda p: set(range(p[0], p[1] + 1)), pair))
         if len(sets[0].intersection(sets[1])) > 0:
