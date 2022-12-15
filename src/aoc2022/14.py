@@ -39,9 +39,6 @@ def fall(grid, x, y) -> tuple[int, int]:
         return (-1, -1)
 
     new_y = y + np.min(ind_nonzero) - 1
-
-    # print(x, y)
-    # print(grid[x - 1, new_y + 1], grid[x + 1, new_y + 1])
     if grid[x - 1, new_y + 1] == 0:
         new_x, new_y = fall(grid, x - 1, new_y + 1)
 
